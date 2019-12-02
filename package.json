@@ -15,7 +15,7 @@
     "node": "10.x.x",
     "npm": "6.x.x"
   },
-  "author": "Nextremer",
+  "author": "",
   "keywords": [
     "typescript",
     "cron",

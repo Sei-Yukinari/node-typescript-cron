@@ -1,0 +1,17 @@
+
+{
+  "name": "node-typescript-cron",
+  "description": "node-typescript-cron",
+  "keywords": [
+    "minarai"
+  ],
+  "repository": "https://github.com/Sei-Yukinari/node-typescript-cron",
+  "env": {
+  },
+  "addons": [
+    "typescript",
+    "cron",
+    "winston",
+    "heroku"
+  ]
+}

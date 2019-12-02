@@ -13,7 +13,7 @@ const isDevMode = process.env.NODE_ENV == 'development';
 const config: IConfig = {
     debugLogging: isDevMode,
     databaseUrl: process.env.DATABASE_URL || 'mysql://user:pass@localhost:3306/dbname',
-    cronJobExpression: '*/10 * * * * *'
+    cronJobExpression: '*/5 * * * *'
 };
 
 export { config };

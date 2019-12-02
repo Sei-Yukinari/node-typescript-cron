@@ -1,0 +1,40 @@
+{
+  "name": "node-typescript-cron",
+  "version": "1.0.0",
+  "description": "cron using NodeJS , typescript. Sequelize for SQL . Middlewares Winston Logger.",
+  "main": "src/server.js",
+  "scripts": {
+    "watch-server": "nodemon --watch src -e ts,tsx --exec ts-node src/server.ts",
+    "build-ts": "tsc",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "serve": "node dist/server.js",
+    "build": "npm run tslint && npm run build-ts",
+    "start": "npm run serve"
+  },
+  "engines": {
+    "node": "10.x.x",
+    "npm": "6.x.x"
+  },
+  "author": "Nextremer",
+  "keywords": [
+    "typescript",
+    "cron",
+    "winston",
+    "heroku"
+  ],
+  "repository": "",
+  "devDependencies": {
+    "@types/cron": "^1.7.1",
+    "@types/dotenv": "^6.1.1",
+    "@types/node": "^12.0.12",
+    "nodemon": "^1.19.1",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "cron": "^1.7.2",
+    "dotenv": "^8.0.0",
+    "winston": "^3.2.1"
+  }
+}

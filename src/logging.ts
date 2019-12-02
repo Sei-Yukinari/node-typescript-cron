@@ -1,4 +1,5 @@
 import winston, { Logger } from 'winston';
+import encoding from 'encoding-japanese';
 
 const alignColorsAndTime = winston.format.combine(
     winston.format.colorize({
@@ -11,7 +12,10 @@ const alignColorsAndTime = winston.format.combine(
         format: 'YY-MM-DD HH:MM:SS'
     }),
     winston.format.printf(
-        info => `${info.label}-${info.timestamp}-${info.level}:${info.message}`
+        info => {
+            console.log(encoding.detect(`${info.label}-${info.timestamp}-${info.level}:${info.message}`));
+            return `${info.label}-${info.timestamp}-${info.level}:${info.message}`;
+        }
     )
 );
 

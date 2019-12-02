@@ -35,6 +35,7 @@
   "dependencies": {
     "cron": "^1.7.2",
     "dotenv": "^8.0.0",
+    "encoding-japanese": "^1.0.30",
     "winston": "^3.2.1"
   }
 }

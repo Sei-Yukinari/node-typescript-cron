@@ -20,7 +20,7 @@ const alignColorsAndTime = winston.format.combine(
     )
 );
 
-console.dir(process.env)
+console.dir(process.env);
 
 export const logger: Logger = winston.createLogger({
     level: 'info',

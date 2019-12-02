@@ -1,9 +1,6 @@
 import winston, { Logger } from 'winston';
 
-const alignColorsAndTime = winston.format.combine(
-    // winston.format.colorize({
-    //     all: true
-    // }),
+const alignFormat = winston.format.combine(
     winston.format.label({
         label: '[LOGGER]'
     }),
@@ -20,7 +17,7 @@ export const logger: Logger = winston.createLogger({
     level: 'info',
     transports: [
         new ( winston.transports.Console )({
-            format: winston.format.combine(winston.format.simple(), winston.format.colorize(), alignColorsAndTime)
+            format: winston.format.combine(alignFormat)
         })
     ],
 });

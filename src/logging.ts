@@ -1,4 +1,5 @@
 import winston, { Logger } from 'winston';
+import { config } from './config';
 
 const alignFormat = winston.format.combine(
     winston.format.label({
@@ -14,7 +15,7 @@ const alignFormat = winston.format.combine(
 );
 
 export const logger: Logger = winston.createLogger({
-    level: 'info',
+    level: config.debugLogging ? 'debug' : 'info',
     transports: [
         new ( winston.transports.Console )({
             format: winston.format.combine(alignFormat)

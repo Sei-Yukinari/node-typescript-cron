@@ -3,7 +3,6 @@
 
 # Dependency directory
 node_modules
-bower_components
 
 # Editors
 .idea
@@ -18,4 +17,3 @@ dist/**/*
 
 # Logging files
 *.log
-*.pyc

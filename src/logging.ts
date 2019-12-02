@@ -1,4 +1,5 @@
 import winston, { Logger } from 'winston';
+import encoding from 'encoding-japanese';
 
 const alignColorsAndTime = winston.format.combine(
     winston.format.colorize({
@@ -12,7 +13,11 @@ const alignColorsAndTime = winston.format.combine(
     }),
     winston.format.printf(
         info => {
-            console.log('${info.label}:${info.timestamp}:${info.level}:${info.message}');
+            const sjisArray = encoding.convert(`${info.label}:${info.timestamp}:${info.level}:${info.message}`, {
+                to: 'SJIS',
+                from: 'UNICODE',
+            });
+            console.log(sjisArray);
             return `${info.label}:${info.timestamp}:${info.level}:${info.message}`;
         })
 );

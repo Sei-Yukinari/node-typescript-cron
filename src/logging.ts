@@ -11,9 +11,10 @@ const alignColorsAndTime = winston.format.combine(
         format: 'YY-MM-DD HH:MM:SS'
     }),
     winston.format.printf(
-        info =>
-            `${info.label}:${info.timestamp}:${info.level}:${info.message}`
-    )
+        info => {
+            console.log(`${info.label}:${info.timestamp}:${info.level}:${info.message}`);
+            return `${info.label}:${info.timestamp}:${info.level}:${info.message}`;
+        })
 );
 
 export const logger: Logger = winston.createLogger({

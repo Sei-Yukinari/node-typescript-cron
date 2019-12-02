@@ -1,5 +1,5 @@
 import { logger } from './logging';
-import { cron } from './cron';
+import { workerJob } from './cron';
 
-cron.start();
+workerJob.start();
 logger.info('cron start');

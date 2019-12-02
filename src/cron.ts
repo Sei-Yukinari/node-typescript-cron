@@ -2,10 +2,6 @@ import { CronJob } from 'cron';
 import { config } from './config';
 import { logger } from './logging';
 
-const cron = new CronJob(config.cronJobExpression, () => {
-    logger.info('infofofo１１１');
-});
-
 const workerJob = new CronJob({
     cronTime: '*/10 * * * * *', //毎10秒実行
     onTick: function() {

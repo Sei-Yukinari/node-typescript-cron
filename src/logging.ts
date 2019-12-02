@@ -12,7 +12,7 @@ const alignColorsAndTime = winston.format.combine(
     }),
     winston.format.printf(
         info => {
-            console.log(`${info.label}:${info.timestamp}:${info.level}:${info.message}`);
+            console.log('${info.label}:${info.timestamp}:${info.level}:${info.message}');
             return `${info.label}:${info.timestamp}:${info.level}:${info.message}`;
         })
 );
